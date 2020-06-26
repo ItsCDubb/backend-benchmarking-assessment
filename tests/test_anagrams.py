@@ -21,6 +21,7 @@ class TestAnagrams(unittest.TestCase):
         except ImportError:
             self.fail('Unable to import module: ' + module_name)
 
+
     def run_find_anagrams(self, word_list, benchmark):
         """Helper func to time the find_anagrams() func"""
         f = functools.partial(self.ana.find_anagrams, word_list)
