@@ -13,6 +13,7 @@ class TestAnagrams(unittest.TestCase):
     Benchmarking test case. We test actual functionality of `find_anagrams`
     with doctests, which is why this test case excludes those unit tests.
     """
+
     def setUp(self):
         module_name = 'anagrams'
         """import the module(s) under test, in the context of this test fixture"""
