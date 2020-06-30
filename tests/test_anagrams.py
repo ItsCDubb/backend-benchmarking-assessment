@@ -13,6 +13,7 @@ class TestAnagrams(unittest.TestCase):
     Benchmarking test case. We test actual functionality of `find_anagrams`
     with doctests, which is why this test case excludes those unit tests.
     """
+
     def setUp(self):
         module_name = 'anagrams'
         """import the module(s) under test, in the context of this test fixture"""
@@ -20,6 +21,7 @@ class TestAnagrams(unittest.TestCase):
             self.ana = importlib.import_module(module_name)
         except ImportError:
             self.fail('Unable to import module: ' + module_name)
+
 
     def run_find_anagrams(self, word_list, benchmark):
         """Helper func to time the find_anagrams() func"""
@@ -48,7 +50,7 @@ class TestAnagrams(unittest.TestCase):
             short_list = f.read().split()
         self.run_find_anagrams(short_list, 0.030)
 
-    @unittest.skip("Remove this line once short test passes")
+
     def test_long(self):
         """Check find_anagrams() with long word list."""
         with open("words/long.txt") as f:
